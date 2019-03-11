@@ -1,0 +1,29 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+#delete-form {
+    display: inline;
+}
+
+.checked {
+    color: orange;
+}
+
+div {
+    transition: 1s ease-in-out;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .1);
+}
+

@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+   
+   <div class='row'>
+       <div class='col-md-4'>
+            <h1 class='text-center'><%= user.firstName + ' ' + user.lastName %></h1>
+        <div class='thumbnail box-shadow'>
+            <img src='<%= user.avatar %>' alt='user profile image'>
+            <div class='caption'>
+                <a href='mailto:<%= user.email %>'><%= user.email %></a>
+                <% if(currentUser && currentUser.username !== user.username){ %>
+                <a href="/follow/<%= user.id %>"><button class="btn btn-success btn-xs pull-right">Follow <%= user.username %></button></a>
+                <% } %>
+            </div>
+            <div class='well'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Morbi malesuada pellentesque vehicula. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Pellentesque eu lectus ac purus auctor 
+                porttitor. Sed ut hendrerit augue. Sed neque nibh, luctus ut tortor 
+                ut, viverra vestibulum risus. Cras elementum vulputate lorem at 
+                luctus. 
+            </div>
+            </div>
+            
+        <div class='well box-shadow'>
+           <div class='col-md-8'>
+               <h3><%= user.username %>'s campgrounds:</h3>
+               <ul>
+                   <% campgrounds.forEach(function(campground) { %>
+                   <li><a href='/campgrounds/<%= campground.id %>'><%= campground.name %></a></li>
+               
+                    <% }); %>
+               </ul>
+           </div>
+       </div>
+   </div>
+   
+<% include ../partials/footer %>
