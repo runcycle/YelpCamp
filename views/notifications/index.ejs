@@ -2,14 +2,16 @@
 
 <h1 class='text-center'>Notifications</h1>
 
-<ul>
-	<% allNotifications.forEach(function(notification) { %>
-	<li>
-		<a href="/campgrounds/<%= notification.campgroundId %>">
-			<%= notification.username %> created a new campground %>
-		</a>
-	</li>
-	<% }); %>
-</ul>
+<div class='well box-shadow'>
+	<ul>
+		<% allNotifications.forEach(function(notification) { %>
+		<li>
+			<a href="/campgrounds/<%= notification.campgroundId %>">
+				<%= notification.username %> created a new campground %>
+			</a>
+		</li>
+		<% }); %>
+	</ul>
+</div>
 
 <% include ../partials/footer %> 
